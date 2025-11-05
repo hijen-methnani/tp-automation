@@ -5,8 +5,8 @@ echo "3. Diagnostic réseau"
 read -p "Choix : " choice
 
 case $choice in
-  1) ./update_system.sh ;;
-  2) ./backup_logs.sh ;;
-  3) ./network_diag.sh ;;
+  1) ./scripts/update_system.sh ;;
+  2) ./scripts/backup_logs.sh ;;
+  3) ./scripts/network_diag.sh;;
   *) echo "Choix invalide" ;;
 esac
