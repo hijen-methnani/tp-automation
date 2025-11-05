@@ -32,8 +32,7 @@ Nettoie les vieilles archives
 
      network_diag.sh
 Teste la connectivité Internet
-Liste les ports ouverts
-Affiche les interfaces réseau
+
 
     admin_auto.sh
 Menu interactif pour tous les scripts
