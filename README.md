@@ -1,7 +1,8 @@
-## TP Automation - Bash/Script
+# TP Automation - Bash/Script
 
-**Étudiante:** hijen-methnani  
+**Étudiant:** hijen-methnani  
 **Niveau:** Bachelor 2  
+**Date:** Novembre 2024
 
 ##  Structure du projet
 tp-automation/
