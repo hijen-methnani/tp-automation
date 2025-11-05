@@ -1,11 +1,12 @@
+
 #!/bin/bash
 
-
-# Variables 
 LOG_SOURCE="/var/log/"
-DATE=$(date +%Y%m%d)
-BACKUP_FILE="logs_$DATE.tar.gz"
+BACKUP_DIR="/var/backups/logs"     # pourù stocker les archives
+BACKUP_FILE="logs_$(date +%Y%m%d).tar.gz"
 BACKUP_PATH="$BACKUP_DIR/$BACKUP_FILE"
+
+
 
 echo "1. Verification espace disque"
 df -h /
