@@ -1,8 +1,6 @@
 # TP Automation - Bash/Script
 
-**Étudiant:** hijen-methnani  
-**Niveau:** Bachelor 2  
-**Date:** Novembre 2024
+**Étudiante:** Hijen Methnani  
 
 ##  Structure du projet
 tp-automation/
@@ -12,19 +10,33 @@ tp-automation/
 ├── docs/ # Documentation
 └── README.md # Ce fichier
 
-text
+
 
 ## Exercice 1 - update_system.sh
 
 Script de mise à jour système automatisé.
 
 ### Utilisation :
-```bash
 chmod +x scripts/update_system.sh
 ./scripts/update_system.sh
-Fonctionnalités :
+
+Fonctionnalités du script:
 Mise à jour des paquets
-
 Nettoyage automatique
-
 Gestion d'erreurs
+
+## Exercice 2 - backup_logs.sh
+Script de sauvegarde des logs système.
+
+Utilisation :
+bash
+chmod +x scripts/backup_logs.sh
+./scripts/backup_logs.sh
+
+Fonctionnalités :
+
+Archivage des logs /var/log/
+Compression .tar.gz
+Nettoyage automatique (7 jours)
+Vérification espace disque
+Rapport détaillé
