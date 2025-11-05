@@ -1,4 +1,3 @@
-#!/bin/bash
 
 # Exercice 1 : Script de mise à jour système
 
