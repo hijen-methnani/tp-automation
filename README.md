@@ -75,9 +75,4 @@ Exercice 7 - Projet Administre
 Bash - Langage de script
 Git - Versionning du code
 GitHub - Hébergement du projet
-
 Linux Debian - Environnement de test
-
-    Auteur
-hijen-methnani
-Étudiant en Bachelor 2 - Automatisation système
