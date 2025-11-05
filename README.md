@@ -1,77 +1,47 @@
-# TP Automation - Administration Système avec Bash
+
+# TP Automation - Administration Système
 
 **Étudiante:** Hijen Methnani  
 
-## Description de mon projet
 
-Projet d'automatisation complète de tâches système développé en Bash. Ce projet regroupe plusieurs scripts d'administration pour la maintenance, la sauvegarde et la surveillance d'un système Linux.
+##  Utilisation
 
-##  Structure du Projet
-tp-automation/
-    scripts/
-        admin_auto.sh # Script principal
-        update_system.sh # Exercice 1 - Mise à jour système
-        backup_logs.sh # Exercice 2 - Sauvegarde des logs
-        network_diag.sh # Exercice 7 - Diagnostic réseau
-    config/
-         config.cfg # Fichier de configuration
-    docs/ # Documentation 
-        Guide complet
-        un rapport personnel
-    backups/ # Archives de sauvegarde (généré automatiquement)
-    README.md # Ce fichier
+```bash
+git clone https://github.com/hijen-methnani/tp-automation.git
+cd tp-automation
+chmod +x scripts/*.sh
 
+# Lancer le menu principal
+./scripts/admin_auto.sh
 
+# Ou utiliser un script directement
+./scripts/update_system.sh
+./scripts/backup_logs.sh
+./scripts/network_diag.sh
 
-#exercice1 update_system.sh
+ Scripts
+     update_system.sh
+Met à jour les paquets système
+Nettoie les paquets inutiles
+Gère les erreurs
 
- update_system.sh - Mise à Jour Système
-    -Met à jour la liste des paquets
-    -Installe les mises à jour disponibles
-    -Nettoie les paquets inutiles
-    -Génère un rapport détaillé
+     backup_logs.sh
+Sauvegarde les logs /var/log/
+Compresse en .tar.gz daté
+Nettoie les vieilles archives
 
+     network_diag.sh
+Teste la connectivité Internet
+Liste les ports ouverts
+Affiche les interfaces réseau
 
-#exercice2
-  backup_logs.sh - Sauvegarde des Logs
-    -Archive les logs système dans /var/log/
-    -Compresse en format .tar.gz daté
-    -Supprime les archives de plus de 7 jours
-    -Vérifie l'espace disque disponible
+    admin_auto.sh
+Menu interactif pour tous les scripts
 
+ 
 
- network_diag.sh - Diagnostic Réseau
-    -Teste la connectivité Internet
-    -Liste les ports ouverts
-    -Affiche les interfaces réseau
+     Documentation
+Voir le dossier docs/ pour :
+    Guide d'utilisation complète
 
-  Configuration
-Le fichier config/config.cfg permet de personnaliser :
-    -Chemins des sauvegardes
-    -Paramètres réseau
-
-
-
-Exercice 1 & 3
-- Mise à jour système complète
--Gestion des erreurs
--Variables pour les commandes
-
-Exercice 2
--Archivage des logs avec date
--Compression .tar.gz
--Nettoyage automatique (7 jours)
--Vérification espace disque
--Boucle for pour lister les fichiers
-
-Exercice 7 - Projet Administre
--Script principal unifié (admin_auto.sh)
--Diagnostic réseau complet (network_diag.sh)
--Fichier de configuration (config.cfg)
--Guide d'administration complet
-
-     Technologies Utilisées
-Bash - Langage de script
-Git - Versionning du code
-GitHub - Hébergement du projet
-Linux Debian - Environnement de test
+Rapport technique personnel
