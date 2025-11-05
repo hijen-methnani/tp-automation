@@ -1,14 +1,7 @@
 #!/bin/bash
 
-# Exercice 2 : Script de sauvegarde de logs
 
-source ../config/config.cfg
-
-
-echo "Sauvegarde dans : $BACKUP_DIR"
-echo "Garder les archives : $RETENTION_DAYS jours"
-
-# Variables (simplifiées)
+# Variables 
 LOG_SOURCE="/var/log/"
 DATE=$(date +%Y%m%d)
 BACKUP_FILE="logs_$DATE.tar.gz"
