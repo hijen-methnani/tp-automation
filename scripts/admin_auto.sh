@@ -2,9 +2,7 @@
 
 # Exercice 7 : Script principal Administre
 
-echo "==================================="
 echo "    ADMINISTRE - AUTOMATISATION"
-echo "==================================="
 
 # Chemin des scripts
 SCRIPTS_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -49,7 +47,5 @@ case $choice in
         ;;
 esac
 
-echo "==================================="
 echo "        OPÉRATION TERMINÉE"
-echo "==================================="   OPÉRATION TERMINÉE"
 echo "==================================="
