@@ -14,7 +14,6 @@ echo "2. Creation dossier backup"
 mkdir -p "$BACKUP_DIR"
 
 echo "3. Archivage des logs"
-tar -czf "$BACKUP_PATH" "$LOG_SOURCE" 2>/dev/null
 
 echo "4. Liste des fichiers sauvegardes :"
 for file in "$LOG_SOURCE"*; do
@@ -23,11 +22,11 @@ for file in "$LOG_SOURCE"*; do
     fi
 done
 
-echo "5. Nettoyage archives de plus de $RETENTION_DAYS jours"
-find "$BACKUP_DIR" -name "logs_*.tar.gz" -mtime +$RETENTION_DAYS -delete
+echo "5. Nettoyage archives de plus de 7 jours"
+find "$BACKUP_DIR" -name "logs_*.tar.gz" -mtime +7 -delete
 
 echo ""
-echo "=== RAPPORT ==="
+echo "RAPPORT "
 echo "Archive : $BACKUP_FILE"
 echo "Taille : $(du -h "$BACKUP_PATH" 2>/dev/null | cut -f1 || echo "Non disponible")"
 echo "Emplacement : $BACKUP_DIR"
