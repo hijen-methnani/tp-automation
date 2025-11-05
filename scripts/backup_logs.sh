@@ -12,19 +12,19 @@ BACKUP_PATH="$BACKUP_DIR/$BACKUP_FILE"
 echo "=== SAUVEGARDE DES LOGS SYSTÈME ==="
 
 # 1. Vérifier l'espace disque
-echo "1. Verification espace disque..."
+echo "1 Verification espace disque"
 df -h /
 
 # 2. Créer le dossier de backup
-echo "2. Creation dossier backup..."
+echo "2 Creation dossier backup"
 mkdir -p "$BACKUP_DIR"
 
 # 3. Archiver les logs
-echo "3. Archivage des logs..."
+echo "3 Archivage des logs"
 tar -czf "$BACKUP_PATH" "$LOG_SOURCE" 2>/dev/null
 
 # 4. Lister les fichiers avec boucle for
-echo "4. Liste des fichiers sauvegardes :"
+echo "4 Liste des fichiers sauvegardes :"
 for file in "$LOG_SOURCE"*; do
     if [ -f "$file" ]; then
         echo "   - $(basename "$file")"
@@ -32,7 +32,7 @@ for file in "$LOG_SOURCE"*; do
 done
 
 # 5. Supprimer archives de plus de 7 jours
-echo "5. Nettoyage archives > 7 jours..."
+echo "5 Nettoyage archives de plus de 7 jours"
 find "$BACKUP_DIR" -name "logs_*.tar.gz" -mtime +7 -delete
 
 # 6. Afficher le rapport
