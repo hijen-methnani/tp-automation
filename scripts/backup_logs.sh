@@ -4,7 +4,6 @@
 
 source ../config/config.cfg
 
-echo "=== SAUVEGARDE DES LOGS SYSTÈME ==="
 
 echo "Sauvegarde dans : $BACKUP_DIR"
 echo "Garder les archives : $RETENTION_DAYS jours"
