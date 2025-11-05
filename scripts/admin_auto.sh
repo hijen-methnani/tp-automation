@@ -1,4 +1,3 @@
-bash
 #!/bin/bash
 
 # Exercice 7 : Script principal Administre
@@ -52,4 +51,5 @@ esac
 
 echo "==================================="
 echo "        OPÉRATION TERMINÉE"
+echo "==================================="   OPÉRATION TERMINÉE"
 echo "==================================="
