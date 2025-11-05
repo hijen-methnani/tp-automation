@@ -9,4 +9,3 @@ echo "2. Ports ouverts :"
 netstat -tuln | grep LISTEN
 
 echo "3. Interfaces réseau :"
-ip addr show | grep -E "eth|wlan|lo" | head -10
