@@ -55,7 +55,6 @@ Le fichier config/config.cfg permet de personnaliser :
 Exercice 1 & 3
 - Mise à jour système complète
 -Gestion des erreurs
--Journalisation des actions
 -Variables pour les commandes
 
 Exercice 2
