@@ -23,13 +23,14 @@ else
     exit 1
 fi
 
-echo "3. Nettoyage"
+echo "3. Nettoyage des paquets"
 if sudo $CLEAN_CMD; then
-    echo "Succès"
+    echo " Succès"
 else
-    echo "Problème"
+    echo " Problème"
 fi
 
+echo "=== MIS À JOUR TERMINÉE ==="
 # 4. Affiche un résumé
 echo " RÉSUMÉ "
 echo "Mise à jour terminée : $(date)"
