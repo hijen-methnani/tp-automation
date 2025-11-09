@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "=== ADMINISTRE ==="
+echo " ADMINISTRE "
 echo "1. Mise à jour système"
 echo "2. Sauvegarde des logs"
 echo "3. Diagnostic réseau"
