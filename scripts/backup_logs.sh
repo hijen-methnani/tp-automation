@@ -1,20 +1,20 @@
-
 #!/bin/bash
+source ../config/config.cfg
 
 LOG_SOURCE="/var/log/"
-BACKUP_DIR="/var/backups/logs"     # pourù stocker les archives
-BACKUP_FILE="logs_$(date +%Y%m%d).tar.gz"
+DATE=$(date +%Y%m%d)
+BACKUP_FILE="logs_$DATE.tar.gz"
 BACKUP_PATH="$BACKUP_DIR/$BACKUP_FILE"
 
-
-
+echo "=== SAUVEGARDE LOGS ==="
 echo "1. Verification espace disque"
 df -h /
 
-echo "2. Creation dossier backup"
+echo "2. Creation dossier backup: $BACKUP_DIR"
 mkdir -p "$BACKUP_DIR"
 
 echo "3. Archivage des logs"
+tar -czf "$BACKUP_PATH" "$LOG_SOURCE" 2>/dev/null
 
 echo "4. Liste des fichiers sauvegardes :"
 for file in "$LOG_SOURCE"*; do
@@ -23,12 +23,7 @@ for file in "$LOG_SOURCE"*; do
     fi
 done
 
-echo "5. Nettoyage archives de plus de 7 jours"
+echo "5. Nettoyage archives > 7 jours"
 find "$BACKUP_DIR" -name "logs_*.tar.gz" -mtime +7 -delete
 
-echo ""
-echo "RAPPORT "
-echo "Archive : $BACKUP_FILE"
-echo "Taille : $(du -h "$BACKUP_PATH" 2>/dev/null | cut -f1 || echo "Non disponible")"
-echo "Emplacement : $BACKUP_DIR"
-echo "Date : $(date)"
+echo "=== TERMINE ==="
